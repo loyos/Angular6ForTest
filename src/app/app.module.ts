@@ -5,6 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { AuthModule } from './auth/auth.module';
 import { LoginComponent } from '@app/auth';
+import { CallbackComponent } from '@app/auth';
 
 const appRoutes: Routes = [
   {
@@ -15,6 +16,11 @@ const appRoutes: Routes = [
   { path: '',
     redirectTo: '/',
     pathMatch: 'full'
+  },
+  {
+    path: 'callback',
+    component: CallbackComponent,
+    data: { title: 'Heroes List' }
   },
   // { path: '**', component: PageNotFoundComponent }
 ];
