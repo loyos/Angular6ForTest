@@ -16,4 +16,8 @@ export class LoginComponent implements OnInit {
     this.a = this.authService.getTest();
   }
 
+  login(){
+    this.authService.login();
+  }
+
 }
